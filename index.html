@@ -13,7 +13,7 @@
     <div style="padding:1em;">
         <ul id="menu" class="menu">
             <li><a id="homepage" href="#">Homepage</a></li>
-          <li><a id="page-show-rider" href="#">Riders</a></li>
+          <li><a id="page-show-riders" href="#">Riders</a></li>
           <li><a id="page-add-rider" href="#">Add Riders</a></li>
           <li><a id="page-edit-rider" style="display:none" href="#">Edit Rider</a></li>
           <li><a id="page-delete-rider" style="display:none" href="#">Delete Rider</a></li>
@@ -65,9 +65,21 @@
   
     <form>
       <input id="input-riderName" placeholder="Add name" />
-      <input id="input-teamName;" placeholder="Add Team" />
+      <input id="input-teamName" placeholder="Add Team" />
       <button id="btn-add-rider" type="button">Add Rider</button>
     </form>
     <!--<p id="candidate-info-all"></p>-->
+  </template>
+
+  <template data-id="page-edit-rider">
+    <h2>Edit Rider </h2>
+  
+    <form>
+      <p id="rider-id"></p>
+      <input id="input-riderName" placeholder="Edit name" />
+      <input id="input-teamName" placeholder="Edit Team" />
+      <button id="btn-done-editing" type="button">Done Editing</button>
+     
+    </form>
   </template>
 

@@ -3,7 +3,8 @@ ul.menu {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: wheat;
+    font-family: "Apple Chancery, cursive" 
   }
   
   ul.menu li {
@@ -12,16 +13,19 @@ ul.menu {
   
   ul.menu li a {
     display: block;
-    color: black;
+    color: brown;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: "Apple Chancery, cursive" 
   }
   
   ul.menu li a:hover:not(.active) {
-    background-color: #111;
+    background-color:rosybrown;
+    font-family: "Apple Chancery, cursive" 
   }
   
   .active {
-    background-color: green;
+    background-color:rosybrown;
+    font-family: "Apple Chancery, cursive" 
   }

@@ -2,6 +2,7 @@ import { renderTemplate, setActive, showPage } from "./utils.js"
 import{getRiders} from "./js-pages/showRiders.js"
 import{getTeams} from "./js-pages/showTeams.js"
 import{addRiderHandlers} from "./js-pages/addRider.js"
+import{editRiderHandlers} from "./js-pages/editRider.js"
 
 function renderMenuItems(evt) {
     const element = evt.target
@@ -23,6 +24,7 @@ function renderMenuItems(evt) {
         break     
       }
        case "page-edit-rider": {
+        editRiderHandlers()
         
          break     
        }
