@@ -27,19 +27,26 @@
 </html>
 
 <template data-id="homepage">
-    <h2>Welcome to Tour de France</h2>
+  <link href="style2.css" rel="stylesheet">
+    <h2>Welcome to Tour De France</h2>
     <img src="tourDeFrance.jpg">
   </template>
 
 
   <template data-id="page-show-riders">
+    <link href="style2.css" rel="stylesheet">
+
     <h2>Riders</h2> 
+
+    <button id="sort-time">The fastes rider </button>
+    
     <table class="table">
         <thead>
           <tr>
             <th style="display:none">ID</th>
             <th>Name</th>
             <th>Team</th>
+            <th>Time</th>
           </tr>
         </thead>
         <tbody id="tbl-body"> </tbody> 
@@ -47,7 +54,9 @@
   </template>
 
   <template data-id="page-show-teams">
+    <link href="style2.css" rel="stylesheet">
     <h2>Teams</h2> 
+
     <table class="table">
         <thead>
           <tr>
@@ -61,6 +70,7 @@
   </template>
 
   <template data-id="page-add-rider">
+    <link href="style2.css" rel="stylesheet">
     <h2>Add Rider </h2>
   
     <form>
@@ -72,6 +82,7 @@
   </template>
 
   <template data-id="page-edit-rider">
+    <link href="style2.css" rel="stylesheet">
     <h2>Edit Rider </h2>
   
     <form>

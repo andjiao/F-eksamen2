@@ -13,6 +13,7 @@ export async function getRiders(){
         <tr>
           <td>${r.riderName}</td>
           <td>${r.teamName}</td>
+          <td>${r.time}</td>
           <td> <button id="btn-edit-rider###${r.id}"type="button" value= "${r.id}">Edit Rider</button></td>
         </tr>
      `).join("")

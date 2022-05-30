@@ -4,7 +4,7 @@ ul.menu {
     padding: 0;
     overflow: hidden;
     background-color: wheat;
-    font-family: "Apple Chancery, cursive" 
+    font-family: Times New Roman, Times, serif 
   }
   
   ul.menu li {
@@ -17,15 +17,17 @@ ul.menu {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: "Apple Chancery, cursive" 
+    font-family: Times New Roman, Times, serif 
   }
   
   ul.menu li a:hover:not(.active) {
     background-color:rosybrown;
-    font-family: "Apple Chancery, cursive" 
+    font-family: Times New Roman, Times, serif 
   }
   
   .active {
     background-color:rosybrown;
-    font-family: "Apple Chancery, cursive" 
+    font-family: Times New Roman, Times, serif  
   }
+  
+

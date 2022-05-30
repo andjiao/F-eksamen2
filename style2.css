@@ -1,0 +1,21 @@
+.table {
+    color: brown;
+    font-family: Times New Roman, Times, serif, cursive
+    
+  }
+  tr:nth-child(even) {background-color: whitesmoke;}
+  
+  button{
+    border-radius: 10px;
+    border-style: 50px;
+    border-color: rosybrown;
+    background-color: antiquewhite;
+    color: brown;
+
+  }
+  h2 {
+    color: brown;
+  }
+  input{
+    background-color: whitesmoke; 
+  }
