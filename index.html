@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="./index.js" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div style="padding:1em;">
+        <ul id="menu" class="menu">
+            <li><a id="homepage" href="#">Homepage</a></li>
+          <li><a id="page-show-rider" href="#">Riders</a></li>
+          <li><a id="page-add-rider" href="#">Add Riders</a></li>
+          <li><a id="page-edit-rider" style="display:none" href="#">Edit Rider</a></li>
+          <li><a id="page-delete-rider" style="display:none" href="#">Delete Rider</a></li>
+          <li><a id="page-show-teams" href="#">Teams</a></li>
+        </ul>
+      </div>
+      <div id="content" style="margin-left:15px;padding-top: 1em;"></div>
+    </div>
+    
+</body>
+</html>
+
+<template data-id="homepage">
+    <h2>Welcome to Tour de France</h2>
+    <img src="tourDeFrance.jpg">
+  </template>
+
+
+  <template data-id="page-show-riders">
+    <h2>Riders</h2> 
+    <table class="table">
+        <thead>
+          <tr>
+            <th style="display:none">ID</th>
+            <th>Name</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body"> </tbody> 
+    </table>
+  </template>
+
+  <template data-id="page-show-teams">
+    <h2>Teams</h2> 
+    <table class="table">
+        <thead>
+          <tr>
+            <th style="display:none">ID</th>
+            <th>Name</th>
+            <th>Number of Members</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body"> </tbody> 
+    </table>
+  </template>
+
+  <template data-id="page-add-rider">
+    <h2>Add Rider </h2>
+  
+    <form>
+      <input id="input-riderName" placeholder="Add name" />
+      <input id="input-teamName;" placeholder="Add Team" />
+      <button id="btn-add-rider" type="button">Add Rider</button>
+    </form>
+    <!--<p id="candidate-info-all"></p>-->
+  </template>
+
