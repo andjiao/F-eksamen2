@@ -3,7 +3,7 @@
     font-family: Times New Roman, Times, serif, cursive
     
   }
-  tr:nth-child(even) {background-color: whitesmoke;}
+  tr:nth-child(even) {background-color: whitesmoke}
   
   button{
     border-radius: 10px;

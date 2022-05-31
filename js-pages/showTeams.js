@@ -21,8 +21,5 @@ export async function getTeams(){
     } catch(err){
         console.log(err.message)
     }
-    
-
-
    
 }

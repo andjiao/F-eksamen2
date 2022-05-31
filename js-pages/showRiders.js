@@ -3,7 +3,6 @@ import {handleHttpErrors} from "../fetchUtils.js"
 import { showPage } from "../utils.js"
 const riderURL = URL + "/riders"
 
-
 export async function getRiders(){
     try{
      const riders = await fetch(riderURL)
@@ -22,7 +21,6 @@ export async function getRiders(){
 
      document.getElementById("tbl-body").onclick = editRider
 
-
     } catch(err){
         console.log(err.message)
     }
@@ -34,8 +32,34 @@ export async function getRiders(){
         const btnId = parts[1]
         sessionStorage.setItem("editId",btnId)
         showPage("page-edit-rider")
-      }
-    
-    
+      }  
 }
+
+document.getElementById("certainTeam-btn").onclick = getCertainTeam
+function getCertainTeam(){
+  
+  const certainTeam = document.getElementById("input-certainTeam").value
+
+      try{
+          fetch(riderURL)
+          .then(res=>handleHttpErrors(res))
+          .then(data => {
+             
+              const rows = data.filter(function(rider) {return rider.teamName === certainTeam}).map(r => `
+        <tr>
+        <td>${r.riderName}</td>
+        <td>${r.teamName}</td>
+        <td>${r.time}</td>
+        </tr>
+        `).join("\n")
+        document.getElementById("tbl-body").innerHTML = rows
+          })
+      }
+      catch(err){
+      alert(err.message)
+           
+         }
+
+  } 
+
 }

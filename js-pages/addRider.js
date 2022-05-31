@@ -16,6 +16,8 @@ export function addRiderHandlers() {
     const rider = {}
     rider.riderName = document.getElementById("input-riderName").value
     rider.teamName = document.getElementById("input-teamName").value
+    rider.time = document.getElementById("input-time").value
+
 
     try{
       await fetch(riderURL, makeOptions("POST", rider)).then(res=>handleHttpErrors(res))
