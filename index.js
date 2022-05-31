@@ -4,6 +4,7 @@ import{getTeams} from "./js-pages/showTeams.js"
 import{addRiderHandlers} from "./js-pages/addRider.js"
 import{editRiderHandlers} from "./js-pages/editRider.js"
 
+
 function renderMenuItems(evt) {
     const element = evt.target
     setActive(element)
