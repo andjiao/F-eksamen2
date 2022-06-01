@@ -4,11 +4,13 @@ import { showPage } from "../utils.js"
 const riderURL = URL + "/riders"
 
 export async function editRiderHandlers() {
+  console.log("editRiderHandler")
     document.getElementById("btn-done-editing").onclick = editRider
     const id = sessionStorage.getItem("editId")
     if (id) {
       try {
      getRiderEdit(id)
+     //deleteRider(id)
       } catch (error) {
         alert(error.message)
   }
@@ -33,13 +35,36 @@ async function getRiderEdit(editId) {
     riderToEdit.time = document.getElementById("input-time").value
   
   try{
-   await fetch(riderURL + `/${editId}`, makeOptions("PUT", riderToEdit)).then(res=>handleHttpErrors(res))
+   await fetch(riderURL + `/${editId}`, makeOptions("PUT", riderToEdit))
+   .then(res=>handleHttpErrors(res))
     showPage("page-show-riders")
   }catch(err){
     alert(err.message)
     
   }
+  }
+}
 
+async function deleteRider(id) {
+    
+  try{
+    await fetch(riderURL +`/${id}`, makeOptions("DELETE")).then(res=>handleHttpErrors(res))
+    showPage("page-show-riders")
+     
+  } catch(err){
+    console.log("fejl ved addRider")
+    alert(err.message)
+  }
+}
 
+async function changeTeam(id, team) {
+  
+  try{
+    await fetch(riderURL +`/${id}`, makeOptions("PATCH", team)).then(res=>handleHttpErrors(res))
+    showPage("page-show-riders")
+     
+  } catch(err){
+    console.log("fejl ved addRider")
+    alert(err.message)
   }
 }

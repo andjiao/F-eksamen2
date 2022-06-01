@@ -17,6 +17,7 @@
           <li><a id="page-add-rider" href="#">Add Riders</a></li>
           <li><a id="page-edit-rider" style="display:none" href="#">Edit Rider</a></li>
           <li><a id="page-delete-rider" style="display:none" href="#">Delete Rider</a></li>
+          <li><a id="page-change-team" style="display:none" href="#">Change Team</a></li>
           <li><a id="page-show-teams" href="#">Teams</a></li>
         </ul>
       </div>
@@ -32,6 +33,26 @@
     <img src="tourDeFrance.jpg">
   </template>
 
+  <template data-id="page-delete-rider">
+    <link href="style2.css" rel="stylesheet">
+      <h2>You are about to delete a rider</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="display:none">ID</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body"> </tbody>  
+    </table>
+    
+
+      <button id="delete-btn">Delete Rider</button>
+    </template>
+
 
   <template data-id="page-show-riders">
     <link href="style2.css" rel="stylesheet">
@@ -41,7 +62,8 @@
     <button id="certainTeam-btn">Search teams</button>
     <input type="text" id="input-certainTeam">
 
-   <!-- <button id="fastest-time">The fastes rider </button>-->
+  
+   <button id="fastest-time">The fastes rider </button>
     
     <table class="table">
         <thead>
@@ -52,7 +74,7 @@
             <th>Time</th>
           </tr>
         </thead>
-        <tbody id="tbl-body"> </tbody> 
+        <tbody id="tbl-body"> </tbody>  
     </table>
   </template>
 
@@ -97,6 +119,17 @@
 
       <button id="btn-done-editing" type="button">Done Editing</button>
      
+    </form>
+  </template>
+
+  <template data-id="page-change-team">
+    <link href="style2.css" rel="stylesheet">
+    <h2>Change team</h2>
+  
+    <form>
+      <p id="rider-id"></p>
+      <input id="input-teamName" placeholder="Change Team" />
+      <button id="btn-done-changing" type="button">Done changing</button>
     </form>
   </template>
 
