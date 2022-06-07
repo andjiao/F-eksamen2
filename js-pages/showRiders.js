@@ -14,8 +14,8 @@ export async function getRiders() {
           <td>${r.teamName}</td>
           <td>${r.time}</td>
           <td> <button id="btn-edit-rider###${r.id}"type="button" value= "${r.id}">Edit Rider</button></td>
-          <td> <button id="btn-delete-rider###${r.id}"type="button" value= "${r.id}">delete Rider</button></td>
-          <td> <button id="btn-change-team###${r.id}"type="button" value= "${r.id}">change Rider</button></td>
+          <td> <button id="btn-delete-rider###${r.id}"type="button" value= "${r.id}">Delete Rider</button></td>
+          <td> <button id="btn-change-team###${r.id}"type="button" value= "${r.id}">Change Team</button></td>
          
         </tr>
      `).join("")
@@ -37,10 +37,8 @@ export async function getRiders() {
 
 
 function editRider(evt) {
-  console.log("editrider(evt)")
   const id = evt.target.id
   if (id.startsWith("btn-edit-rider")) {
-    console.log("if-sta")
     const parts = id.split("###")
     const btnId = parts[1]
     sessionStorage.setItem("editId", btnId)
@@ -61,7 +59,6 @@ function deleteRider(evt) {
 
 function changeTeam(evt) {
   const rId = evt.target.id
-  console.log("changeTeam(evt)")
   if (rId.startsWith("btn-change-team")) {
     const parts = rId.split("###")
     const btnId = parts[1]

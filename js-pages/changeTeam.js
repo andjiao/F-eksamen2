@@ -21,13 +21,13 @@ async function getRiderChange(riderId) {
     .then(res => handleHttpErrors(res))
     
     document.getElementById("input-teamName").value= rider.teamName
-     console.log( rider)
+    
   
   }
 
   async function changeTeam() {
     const riderId = sessionStorage.getItem("riderId")
-    console.log(riderId)
+  
     const riderToChange = {}
     riderToChange.id = riderId
     const teamName = document.getElementById("input-teamName").value 

@@ -2,8 +2,11 @@
     color: brown;
     font-family: Times New Roman, Times, serif, cursive
     
+    
   }
-  tr:nth-child(even) {background-color: whitesmoke}
+  tr:nth-child(even) {
+   
+    background-color: whitesmoke}
   
   button{
     border-radius: 10px;
@@ -14,9 +17,24 @@
 
   }
   h2 {
+    border-top:0;
+    border-bottom:10px;
+
     color: brown;
   }
   input{
     background-color: whitesmoke;
     color: brown; 
+  }
+
+  #input-certainTeam{
+    position: left
+  }
+  #certainTeam-btn{
+    position: center;
+  }
+  #fastest-time{
+    position:relative; 
+    left: 80px; 
+    top:50px;
   }
