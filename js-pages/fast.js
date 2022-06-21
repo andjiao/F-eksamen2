@@ -11,7 +11,7 @@ function getFast() {
         fetch(riderURL)
             .then(res => handleHttpErrors(res))
             .then(data => {
-                data = data.sort((a, b) => b.time - a.time)
+                data = data.sort((a, b) => a.time - b.time)
               const rows =data.map(r => `
         <tr>
         <td>${r.riderName}</td>

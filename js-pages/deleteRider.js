@@ -22,8 +22,6 @@ export async function deleteRiderHandler(){
   } catch(err){
 
   }
-  
-  
 
  document.getElementById("delete-btn").onclick= deleteRider
 }
