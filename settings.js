@@ -1,1 +1,1 @@
-export const URL="https://techeksamen.azurewebsites.net/api"
+export const URL="https://techeksamen.azurewebsites.net"
